@@ -1,0 +1,136 @@
+
+nav {
+    background-color: rgb(25, 70, 107);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 49px;
+  }
+  
+  nav h2 {
+    color: #fff;
+    text-align: center;
+    text-decoration: underline;
+    padding-top: 7px;
+    pointer-events: none;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    display: flex;
+  }
+  
+  nav ul li {
+    padding: 15px;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: #eee;
+    padding: 15px;
+  }
+  
+  nav ul li a.active {
+    background-color: #465bcc;
+  }
+  
+  .form input {
+    margin: 10px;
+    border-radius: 4px;
+    outline-color: dodgerblue;
+    transition: .4s;
+    padding: 5px;
+    border: none;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    height: inherit;
+  }
+  
+  .form {
+    max-height: 40px;
+  }
+  
+  .form button {
+    position: relative;
+    right: 10px;
+    top: 3px;
+    height: inherit;
+    border-radius: 0;
+    width: 30px;
+  }
+  
+  .form button i {
+    font-size: 18.5px;
+  }
+  
+  
+  .menu-icon {
+    color: #fff;
+    background-color: #2e3752;
+    position: relative;
+    top: 10px;
+    font-size: 30px;
+  }
+  
+  #drawer {
+    display: none;
+  }
+  
+  .toggle-items {
+    display: flex;
+    flex-direction: row;
+    z-index: 3;
+    
+  }
+  
+  @media only screen and (max-width: 650px) {
+  
+    #drawer {
+      display: block;
+    }
+    .toggle-items {
+      position: absolute;
+      top: 49px;
+      background-color: #19466b;
+      width: 100%;
+      flex-direction: column;
+      align-items: center;
+      overflow: hidden;
+      max-height: 0;
+      transition: max-height .4s;
+    }
+  
+    .shown {
+      max-height: 400px;
+    }
+  
+    .toggle-items ul {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .toggle-items ul li a {
+      padding: 15px 0px;
+      display: inline-block;
+      width: 100%;
+      text-align: center;
+    }
+
+    .toggle-items ul, .toggle-items li {
+      padding: 0;
+      width: 100%;
+    }
+  
+    #drawer {
+      margin-right: 20px;
+    }
+  
+    nav h2 {
+      margin-left: 50px;
+    }
+  
+    nav {
+      justify-content: space-between;
+    }
+  
+  }
